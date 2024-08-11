@@ -74,7 +74,7 @@ const datasetsB = [
 
 
 export default function Prediksi(props) {
-	
+
 
 	const [dataB, setDataB] = React.useState({
 		musan1: [],
@@ -92,8 +92,11 @@ export default function Prediksi(props) {
 
 	});
 
+
+
+
 	React.useEffect(() => {
-		
+
 		datasetsB.forEach((datasetB) => {
 			console.log("datasetB", datasetB);
 			axios
@@ -116,12 +119,17 @@ export default function Prediksi(props) {
 		});
 	}, []);
 
+
+
 	return (
 		<Template userName="Fikri Rida P" title="Prediksi NPK dan Kebutuhan Nutrisi" page={Pages.Prediksi}>
 			<div className="container-fluid">
 
 				<div className="row">
 					<div className="col-auto">
+
+						
+
 
 						<section className="flex flex-col mt-10 bg-white overflow-y-hidden rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)] w-full">
 							<div className="flex flex-col w-full p-5">
@@ -267,6 +275,19 @@ export default function Prediksi(props) {
 								</div>
 							</div>
 						</section>
+
+						<section className="grid grid-cols-1 gap-4 mt-12">
+							<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
+								<div className="flex flex-row justify-between gap-4">
+									<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
+										<span style={{ color: '#FFFFFF' }} className="text-center">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</span>
+									</div>
+								</div>
+							</div>
+						</section>
+						
 					</div>
 				</div>
 			</div>

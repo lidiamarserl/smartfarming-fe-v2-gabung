@@ -22,6 +22,7 @@ import DatasetDevice from "./Pages/Dataset/Device";
 import ControlList from "./Pages/Control/List";
 import ControlSwitch from "./Pages/Control/Switch";
 import Anomaly from "./Pages/Dashboard/anomaly";
+// import Anomaly from "./Pages/Anomaly";
 import Prediksi from "./Pages/Dashboard/prediksi";
 import Valve from "./Pages/Dashboard/valve";
 
