@@ -17,7 +17,7 @@ export default function Login(props) {
     e.preventDefault();
 
     axios
-      .post("/login", {
+      .post("/user/login", {
         email,
         password,
       })
@@ -37,9 +37,7 @@ export default function Login(props) {
     <div className="login-body">
       <div className="container-fluid pt-5">
         <div className="row justify-content-center mb-3">
-          <div className="col-auto">
-            <img src={Logo} height={5} />
-          </div>
+
           <div className="col-auto">
             <p>
               <span
@@ -109,7 +107,7 @@ export default function Login(props) {
         <div className="row justify-content-center mt-5">
           <div className="col-md-4">
             <p className="text-muted text-center w-100">
-              Fikri Rida P., S.T. & Lidia Marserlina &copy; 2024
+              Fikri Rida P., S.T. &copy; 2024
             </p>
           </div>
         </div>

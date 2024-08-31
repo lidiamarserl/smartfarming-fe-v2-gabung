@@ -29,7 +29,7 @@ export default function Sidebar(props) {
 
       {/* Sidebar */}
       <div className="sidebar">
-        {/* Sidebar user panel (optional) */}
+        {/* Sidebar user panel (optional)
         <div className="user-panel mt-3 pb-3 mb-3 d-flex">
           <div className="image">
             <img src={User} className="img-circle elevation-2" alt="User" />
@@ -40,19 +40,7 @@ export default function Sidebar(props) {
             </NavLink>
           </div>
         </div>
-
-        <div className="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div className="image">
-            <img src={User2} className="img-circle elevation-2" alt="User" />
-          </div>
-          <div className="info">
-            <NavLink to="/" className="d-block">
-              {/* {props.userName} */}
-              <span className="brand-text font-weight-light">Lidia Marserlina</span>
-            </NavLink>
-          </div>
-        </div>
-
+*/}
         
 
 
@@ -69,7 +57,7 @@ export default function Sidebar(props) {
               <NavLink
                 to="/"
                 className={`nav-link sidebar-toggle-btn ${
-                  props.page == Pages.Dashboard ? "active" : null
+                  props.page === Pages.Dashboard ? "active" : null
                 }`}
               >
                 <i className="nav-icon fas fa-tachometer-alt"></i>
@@ -80,7 +68,7 @@ export default function Sidebar(props) {
               <NavLink
                 to="/dashboard/anomaly"
                 className={`nav-link sidebar-toggle-btn ${
-                  props.page == Pages.Anomaly ? "active" : null
+                  props.page === Pages.Anomaly ? "active" : null
                 }`}>
                 <i className="nav-icon fa-solid fa-chart-line" />
                 <p>Anomaly</p>
@@ -90,7 +78,7 @@ export default function Sidebar(props) {
               <NavLink
                 to="/dashboard/prediksi"
                 className={`nav-link sidebar-toggle-btn ${
-                  props.page == Pages.Prediksi ? "active" : null
+                  props.page === Pages.Prediksi ? "active" : null
                 }`}>
                 <i className="fa-solid fa-list-ul nav-icon" />
                 <p>Prediksi</p>
@@ -100,7 +88,7 @@ export default function Sidebar(props) {
               <NavLink
                 to="/dashboard/logValve"
                 className={`nav-link sidebar-toggle-btn ${
-                  props.page == Pages.Valve ? "active" : null
+                  props.page === Pages.Valve ? "active" : null
                 }`}>
                 <i className="fa-solid fa-clock-rotate-left nav-icon" />
                 <p>Log Control Valve</p>
@@ -113,7 +101,7 @@ export default function Sidebar(props) {
               <NavLink
                 to="/dataset"
                 className={`nav-link sidebar-toggle-btn ${
-                  props.page == Pages.Dataset ? "active" : null
+                  props.page === Pages.Dataset ? "active" : null
                 }`}
               >
                 <i className="nav-icon fa-solid fa-chart-line" />
@@ -126,7 +114,7 @@ export default function Sidebar(props) {
               <NavLink
                 to="/control/list"
                 className={`nav-link sidebar-toggle-btn ${
-                  props.page == Pages.Control.List ? "active" : null
+                  props.page === Pages.Control.List ? "active" : null
                 }`}
               >
                 <i className="fa-solid fa-list-ul nav-icon" />

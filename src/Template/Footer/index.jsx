@@ -13,7 +13,7 @@ export default function Footer() {
           </a>{" "}
           | Developed By{" "}
           <a href="https://www.fikrirp.com" target="_blank" rel="noreferrer">
-            Fikri Rida P., S.T. & Lidia Marserlina
+            Fikri Rida P., S.T.
           </a>
         </strong>
         <div className="float-right d-none d-sm-inline-block">

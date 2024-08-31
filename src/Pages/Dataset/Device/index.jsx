@@ -32,7 +32,7 @@ export default function Device(props) {
       page={Pages.Dataset}
     >
       <div className="container-fluid">
-        {devices.length == 0 ? (
+        {devices.length === 0 ? (
           <div className="row">
             <div className="col">
               <div className="alert alert-warning" role="alert">

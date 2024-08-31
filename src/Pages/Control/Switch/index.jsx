@@ -25,7 +25,7 @@ export default function Switch() {
       page={Pages.Control.List}
     >
       <div className="container-fluid">
-        {controls.length == 0 ? (
+        {controls.length === 0 ? (
           <div className="row">
             <div className="col">
               <div className="alert alert-warning" role="alert">

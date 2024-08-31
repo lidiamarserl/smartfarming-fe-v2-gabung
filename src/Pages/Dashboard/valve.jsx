@@ -3,7 +3,7 @@ import Pages from "../../Constants/Pages.json";
 import axios from "axios";
 import './index.css'
 import * as React from "react";
-import { Line } from "react-chartjs-2";
+// import { Line } from "react-chartjs-2";
 import "chart.js/auto";
 
 const datasetsB = [
@@ -34,7 +34,8 @@ export default function Valve(props) {
 		datasetsB.forEach((datasetB) => {
 			console.log("datasetB", datasetB);
 			axios
-				.get("https://api.sf2.ctailab.com/datalist", {
+				// .get("https://api.sf2.ctailab.com/datalist", {
+				.get("https://api-sf2.vercel.app/datalist", {
 					params: {
 						device_id: datasetB.device_id,
 						index_id: datasetB.index_id,
@@ -70,7 +71,7 @@ export default function Valve(props) {
 											Log Control Valve 1
 										</h2>
 										<div className="text-teal-500">
-											Status pemberian irigasi bedeng hujan
+											Status pemberian irigasi bedeng Kolom B
 										</div>
 										<div className="flex flex-row gap-3 px-2 py-5 justify-between items-center w-full font-medium text-gray-400 border-b border-solid border-zinc-100">
 											<div className="font-medium text-gray-400 w-full text-center justify-center items-center">
@@ -112,18 +113,18 @@ export default function Valve(props) {
 						</section>
 
 
-						<section className="grid grid-cols-1 gap-4 mt-12">
-							<div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]">
-								<div className="flex flex-row justify-between gap-4">
-									<div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
-										<span style={{ color: '#FFFFFF' }} className="text-center">
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										</span>
-									</div>
-								</div>
-							</div>
-						</section>
-						
+                        <section className="grid grid-cols-1 gap-4 mt-12">
+                            <div className="flex flex-col p-9 gap-4 bg-white rounded-[30px] shadow-[0px_10px_60px_rgba(226,236,249,0.5)]" style={{ backgroundColor: 'rgba(255, 255, 255, 0)' }}>
+                                <div className="flex flex-row justify-between gap-4">
+                                    <div className="flex flex-col gap-4 mt-3 items-center justify-center w-full">
+                                        <span style={{ color: 'rgba(255, 255, 255, 0.5)' }} className="text-center">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
 
 
 					</div>
