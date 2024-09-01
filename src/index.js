@@ -46,6 +46,7 @@ import PH1 from "./Pages/Dashboard/PH1";
 import PH2 from "./Pages/Dashboard/PH2";
 import ST1 from "./Pages/Dashboard/ST1";
 import ST2 from "./Pages/Dashboard/ST2";
+import Detail from "./Pages/Dashboard/detail";
 
 
 
@@ -193,6 +194,10 @@ const router = createBrowserRouter([
   {
     path: "/dashboard/ST2",
     element: <ST2 />,
+  },
+  {
+    path: "/dashboard/:device_id/:index_id",
+    element: <Detail />, // Komponen detail grafik
   },
   
 ]);

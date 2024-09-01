@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
+    "node_modules/flowbite-react/lib/esm/**/*.js",
     "./index.html",
     "./src/Pages/Dashboard/*.{js,ts,jsx,tsx}",
     "./src/Pages/Anomaly/*.{js,ts,jsx,tsx}",
@@ -15,9 +16,11 @@ export default {
             gray: {50: "#fafbff", 200: "#eeeeee", 600: "#757575", "200_01": "#f0f0f0"},
             green: {900: "#056526"},
             indigo: {"50_7f":"#e1ecf87f"},
-            red: {a700: "df0303", }
+            red: {a700: "df0303"}
         }
     }
 },
-  plugins: [],
+  plugins: [
+        require('flowbite/plugin')
+    ],
 }

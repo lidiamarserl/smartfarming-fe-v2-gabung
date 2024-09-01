@@ -9,21 +9,21 @@ import "chart.js/auto";
 //nanti ini buat menampillkan anomaly detection di chart
 const datasetsC = [
     {
-        sensor_name: "PH1",
-        elementId: "PH1",
+        sensor_name: "PH2",
+        elementId: "PH2",
     },
 ];
 
 
-export default function SMC1R1(props) {
+export default function PH1(props) {
  
     //ini nanti buat anomaly
     const [dataC, setDataC] = React.useState({
-        PH1: null,
+        PH2: null,
     });
 
-    const [PH1Chart, setPH1Chart] = React.useState([]);
-    const [PH1Chart_val, setPH1Chart_val] = React.useState([]);
+    const [PH2Chart, setPH2Chart] = React.useState([]);
+    const [PH2Chart_val, setPH2Chart_val] = React.useState([]);
 
     React.useEffect(() => {
 
@@ -43,9 +43,9 @@ export default function SMC1R1(props) {
                         [datasetC.elementId]: reversedData || [],
                     }));
 
-                    if (datasetC.elementId === "PH1") {
-                        setPH1Chart(reversedData);
-                        setPH1Chart_val(reversedData);
+                    if (datasetC.elementId === "PH2") {
+                        setPH2Chart(reversedData);
+                        setPH2Chart_val(reversedData);
                     } 
                 })
                 .catch((err) => {
@@ -55,12 +55,12 @@ export default function SMC1R1(props) {
     }, []);
 
 
-    const chartPH1 = {
-        labels: PH1Chart.map((item) => new Date(item.createdAt).toLocaleString()),
+    const chartPH2 = {
+        labels: PH2Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "PH1",
-                data: PH1Chart.map((item) => item.anomaly),
+                label: "PH2",
+                data: PH2Chart.map((item) => item.anomaly),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
                 borderColor: "rgba(75,192,192,1)",
@@ -69,12 +69,12 @@ export default function SMC1R1(props) {
         ],
     };
     
-    const chartPH1_val = {
-        labels: PH1Chart.map((item) => new Date(item.createdAt).toLocaleString()),
+    const chartPH2_val = {
+        labels: PH2Chart.map((item) => new Date(item.createdAt).toLocaleString()),
         datasets: [
             {
-                label: "PH1",
-                data: PH1Chart.map((item) => item.value),
+                label: "PH2",
+                data: PH2Chart.map((item) => item.value),
                 fill: false,
                 backgroundColor: "rgba(75,192,192,1)",
                 borderColor: "rgba(75,192,192,1)",
@@ -121,11 +121,11 @@ export default function SMC1R1(props) {
                                             {/* Kolom pertama */}
                                             <div className="w-1/2 p-3">
                                                 <h2 className="text-2xl font-semibold tracking-tight text-black">
-                                                    Anomali Sensor PH1
+                                                    Anomali Sensor PH2
                                                 </h2>
                                                 <div className="text-teal-500">Nilai 0 berarti normal dan nilai 1 berarti anomali</div>
                                                 <div className="font-medium text-gray-400 text-center justify-center items-center">
-                                                    <Line data={chartPH1} options={options} />
+                                                    <Line data={chartPH2} options={options} />
                                                 </div>
                                             </div>
                                             {/* Kolom kedua */}
@@ -135,7 +135,7 @@ export default function SMC1R1(props) {
                                                 </h2>
                                                 <div className="text-teal-500">Nilai bacaan sensor yang terekam oleh database</div>
                                                 <div className="font-medium text-gray-400 text-center justify-center items-center">
-                                                    <Line data={chartPH1_val} options={options} />
+                                                    <Line data={chartPH2_val} options={options} />
                                                 </div>
                                             </div>
                                         </div>
